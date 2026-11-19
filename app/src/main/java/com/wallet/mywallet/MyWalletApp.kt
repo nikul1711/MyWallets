@@ -25,7 +25,13 @@ class MyWalletApp : Application() {
         container = AppContainer(this)
 
         // Add the default profile, plan and categories on the very first launch.
-        appScope.launch { container.seeder.seedIfNeeded() }
+        appScope.launch {
+            container.seeder.seedIfNeeded()
+            // Whenever someone logs in, copy their name and email into the local profile.
+            container.authRepository.account.collect { account ->
+                if (account != null) container.userRepository.applyAccount(account.name, account.email)
+            }
+        }
 
         NotificationHelper.createChannel(this)
         scheduleBillReminders()

@@ -1,6 +1,7 @@
 package com.wallet.mywallet
 
 import android.content.Context
+import com.wallet.mywallet.auth.AuthRepository
 import com.wallet.mywallet.db.AppDatabase
 import com.wallet.mywallet.db.DatabaseSeeder
 import com.wallet.mywallet.repository.BillRepository
@@ -22,6 +23,7 @@ class AppContainer(context: Context) {
 
     val seeder = DatabaseSeeder(context.applicationContext, database)
 
+    val authRepository = AuthRepository()
     val userRepository = UserRepository(database.userDao())
     val subscriptionRepository = SubscriptionRepository(database.subscriptionDao())
     val walletRepository = WalletRepository(database.walletDao())

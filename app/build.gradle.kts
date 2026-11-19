@@ -1,9 +1,19 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
+
+// Supabase keys live in local.properties (which is NOT committed to Git), never in the code.
+val localProperties = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+val supabaseUrl = localProperties.getProperty("SUPABASE_URL") ?: "https://YOUR_PROJECT_ID.supabase.co"
+val supabaseAnonKey = localProperties.getProperty("SUPABASE_ANON_KEY") ?: "YOUR_SUPABASE_ANON_KEY"
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp") // generates the Room database code at build time
+    id("org.jetbrains.kotlin.plugin.serialization") // Supabase sends and receives JSON
 }
 
 android {
@@ -16,6 +26,9 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
+        buildConfigField("String", "SUPABASE_URL", "\"$supabaseUrl\"")
+        buildConfigField("String", "SUPABASE_ANON_KEY", "\"$supabaseAnonKey\"")
     }
 
     buildTypes {
@@ -27,6 +40,7 @@ android {
 
     buildFeatures {
         viewBinding = true // gives every layout a typed "Binding" class, so no findViewById
+        buildConfig = true // exposes the Supabase URL and key as BuildConfig fields
     }
 
     compileOptions {
@@ -70,6 +84,11 @@ dependencies {
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
+
+    // Login / register (Supabase Auth). The BOM keeps all Supabase modules on the same version.
+    implementation(platform("io.github.jan-tennert.supabase:bom:3.9.0"))
+    implementation("io.github.jan-tennert.supabase:auth-kt")
+    implementation("io.ktor:ktor-client-android:3.6.1") // the HTTP engine Supabase uses on Android
 
     // Threading
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")

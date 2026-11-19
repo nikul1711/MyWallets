@@ -9,6 +9,33 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/transactionsFragment">
 
+    <!-- Login and register. MainActivity picks the start screen from the saved session. -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.wallet.mywallet.ui.auth.LoginFragment"
+        android:label="@string/title_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.wallet.mywallet.ui.auth.RegisterFragment"
+        android:label="@string/title_register" />
+
+    <!-- Used when the user logs out (or the session ends): clear every screen, show Login. -->
+    <action
+        android:id="@+id/action_global_login"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <!-- Used after login / register: clear the auth screens, show the home tab. -->
+    <action
+        android:id="@+id/action_global_home"
+        app:destination="@id/transactionsFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+
     <!-- Bottom navigation tabs -->
     <fragment
         android:id="@+id/transactionsFragment"

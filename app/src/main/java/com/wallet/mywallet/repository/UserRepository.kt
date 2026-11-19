@@ -14,6 +14,18 @@ class UserRepository(private val userDao: UserDao) {
 
     suspend fun getUser(): UserEntity? = userDao.get()
 
+    /** After login: show the account's name and email as the local profile. */
+    suspend fun applyAccount(displayName: String?, email: String?) {
+        val current = userDao.get() ?: return
+        userDao.upsert(
+            current.copy(
+                displayName = displayName?.takeIf { it.isNotBlank() } ?: current.displayName,
+                email = email ?: current.email,
+                updatedAt = System.currentTimeMillis()
+            )
+        )
+    }
+
     suspend fun updateProfile(displayName: String, email: String?, defaultCurrency: String) {
         val current = userDao.get() ?: return
         userDao.upsert(
