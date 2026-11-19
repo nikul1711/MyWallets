@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyWallet</string>
+    <string name="default_user_name">Me</string>
+
+    <!-- Screen titles (toolbar) -->
+    <string name="title_transactions">Transactions</string>
+    <string name="title_transaction">Transaction</string>
+    <string name="title_budgets">Budgets</string>
+    <string name="title_budget">Budget</string>
+    <string name="title_reports">Reports</string>
+    <string name="title_wallets">Wallets</string>
+    <string name="title_wallet">Wallet</string>
+    <string name="title_more">More</string>
+    <string name="title_goals">Savings goals</string>
+    <string name="title_goal">Goal</string>
+    <string name="title_bills">Recurring bills</string>
+    <string name="title_bill">Bill</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_premium">Premium</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_transactions">Activity</string>
+    <string name="nav_budgets">Budgets</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_wallets">Wallets</string>
+    <string name="nav_more">More</string>
+
+    <!-- Common buttons -->
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="upgrade">Upgrade</string>
+
+    <!-- Common words -->
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="net">Net</string>
+    <string name="uncategorised">Uncategorised</string>
+    <string name="no_category">No category</string>
+    <string name="all_expenses">All expenses</string>
+    <string name="percent_format">%1$d%%</string>
+
+    <!-- Empty states -->
+    <string name="empty_transactions">No transactions yet.\nTap + to add your first one.</string>
+    <string name="empty_wallets">No wallets yet.\nTap + to create one, for example Cash or Bank.</string>
+    <string name="empty_budgets">No budgets yet.\nTap + to set a monthly spending limit.</string>
+    <string name="empty_goals">No savings goals yet.\nTap + to create one.</string>
+    <string name="empty_bills">No recurring bills yet.\nTap + to add rent, subscriptions and other regular payments.</string>
+    <string name="empty_reports">Create a wallet and add some transactions to see your reports.</string>
+
+    <!-- Floating button descriptions -->
+    <string name="add_transaction">Add transaction</string>
+    <string name="add_wallet">Add wallet</string>
+    <string name="add_budget">Add budget</string>
+    <string name="add_goal">Add goal</string>
+    <string name="add_bill">Add bill</string>
+
+    <!-- Form hints -->
+    <string name="hint_amount">Amount</string>
+    <string name="hint_wallet">Wallet</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_note">Note (optional)</string>
+    <string name="hint_wallet_name">Wallet name</string>
+    <string name="hint_currency">Currency</string>
+    <string name="hint_initial_balance">Initial balance</string>
+    <string name="hint_monthly_limit">Monthly limit</string>
+    <string name="hint_goal_name">Goal name</string>
+    <string name="hint_target_amount">Target amount</string>
+    <string name="hint_deadline">Deadline (optional)</string>
+    <string name="hint_bill_name">Bill name</string>
+    <string name="hint_pay_from_wallet">Pay from wallet</string>
+    <string name="hint_repeats">Repeats</string>
+    <string name="hint_next_due">Next due date</string>
+    <string name="hint_remind_days">Remind me this many days before</string>
+    <string name="hint_display_name">Your name</string>
+    <string name="hint_email">Email (optional)</string>
+    <string name="hint_default_currency">Default currency</string>
+
+    <!-- Validation messages -->
+    <string name="error_name_required">Please enter a name.</string>
+    <string name="error_currency_required">Please choose a currency.</string>
+    <string name="error_wallet_required">Please choose a wallet.</string>
+    <string name="error_invalid_amount">Please enter a valid amount.</string>
+    <string name="error_invalid_email">Please enter a valid email address.</string>
+    <string name="error_invalid_remind_days">Reminder days must be a number from 0 to 60.</string>
+
+    <!-- Transactions -->
+    <string name="this_month">This month</string>
+    <string name="month_summary_line">Income %1$s\nExpense %2$s</string>
+    <string name="no_activity_this_month">No activity yet this month</string>
+    <string name="create_wallet_first">Create a wallet first, then add transactions to it.</string>
+    <string name="delete_transaction_message">Delete this transaction?</string>
+
+    <!-- Wallets -->
+    <string name="delete_wallet_message">Delete this wallet? All of its transactions will be deleted too.</string>
+
+    <!-- Budgets -->
+    <string name="budget_spent_of">%1$s of %2$s</string>
+    <string name="budget_left">%1$s left</string>
+    <string name="budget_over">%1$s over budget</string>
+    <string name="delete_budget_message">Delete this budget?</string>
+
+    <!-- Goals -->
+    <string name="add_savings">Add savings</string>
+    <string name="savings_added">Savings added</string>
+    <string name="goal_saved_of">%1$s saved of %2$s</string>
+    <string name="goal_due">Due %1$s</string>
+    <string name="goal_completed">Goal reached 🎉</string>
+    <string name="delete_goal_message">Delete this goal?</string>
+
+    <!-- Bills -->
+    <string name="mark_paid">Mark as paid</string>
+    <string name="bill_marked_paid">Marked as paid and added to your transactions</string>
+    <string name="bill_paused">Paused</string>
+    <string name="bill_due_on">Due %1$s</string>
+    <string name="bill_active">Active (reminders on)</string>
+    <string name="bills_premium_banner">Recurring bills and payment reminders are a Premium feature.</string>
+    <string name="delete_bill_message">Delete this bill?</string>
+    <string name="interval_daily">Every day</string>
+    <string name="interval_weekly">Every week</string>
+    <string name="interval_monthly">Every month</string>
+    <string name="interval_yearly">Every year</string>
+    <plurals name="reminder_due_in_days">
+        <item quantity="one">Due in %d day</item>
+        <item quantity="other">Due in %d days</item>
+    </plurals>
+    <plurals name="reminder_overdue_days">
+        <item quantity="one">Overdue by %d day</item>
+        <item quantity="other">Overdue by %d days</item>
+    </plurals>
+    <string name="reminder_due_today">Due today</string>
+    <string name="channel_bills_name">Bill reminders</string>
+    <string name="channel_bills_description">Reminds you before a recurring bill is due</string>
+
+    <!-- Reports -->
+    <string name="previous_month">Previous month</string>
+    <string name="next_month">Next month</string>
+    <string name="spending_by_category">Spending by category</string>
+    <string name="no_spending">No spending recorded this month.</string>
+    <string name="six_month_trend">Last 6 months</string>
+    <string name="reports_premium_banner">Browse any month and see the 6-month trend with Premium.</string>
+    <string name="reports_premium_only">Browsing past months is a Premium feature.</string>
+
+    <!-- Profile -->
+    <string name="profile_saved">Profile saved</string>
+    <string name="manage_plan">Manage plan</string>
+
+    <!-- Premium / plans -->
+    <string name="your_plan">Your plan</string>
+    <string name="choose_a_plan">Choose a plan</string>
+    <string name="free_vs_premium">Free vs Premium</string>
+    <string name="feature">Feature</string>
+    <string name="plan_free">Free</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_monthly">Premium Monthly</string>
+    <string name="plan_yearly">Premium Yearly</string>
+    <string name="plan_lifetime">Premium Lifetime</string>
+    <string name="plan_free_badge">Free plan</string>
+    <string name="plan_premium_badge">Premium ★</string>
+    <string name="plan_status_free">You are on the free plan.</string>
+    <string name="plan_status_never_expires">Active, never expires</string>
+    <string name="plan_status_until">Active until %1$s</string>
+    <!-- Prices are placeholders. Real prices will come from Google Play when billing is added. -->
+    <string name="price_free">$0</string>
+    <string name="price_monthly">$2.99</string>
+    <string name="price_yearly">$19.99</string>
+    <string name="price_lifetime">$49.99</string>
+    <string name="period_forever">forever</string>
+    <string name="period_month">/ month</string>
+    <string name="period_year">/ year</string>
+    <string name="period_once">one-time</string>
+    <string name="plan_price_period">%1$s %2$s</string>
+    <string name="choose_plan">Choose</string>
+    <string name="current_plan">Current plan</string>
+    <string name="switch_to_free">Switch back to Free (test)</string>
+    <string name="activate">Activate</string>
+    <string name="payments_not_connected">Payments are not connected yet. Choosing a plan switches it on locally for testing, with no charge.</string>
+    <string name="test_mode_title">Test mode</string>
+    <string name="test_mode_message">Payments are not connected yet. This will switch on %1$s on this phone, with no charge.</string>
+    <string name="plan_activated_test">Plan activated (test mode)</string>
+    <string name="plan_reset_test">Switched back to the free plan</string>
+
+    <!-- Free vs Premium feature table (see billing/Feature.kt) -->
+    <string name="feature_wallets">Wallets</string>
+    <string name="feature_wallets_free">Up to 2</string>
+    <string name="feature_wallets_premium">Unlimited</string>
+    <string name="feature_budgets">Budgets</string>
+    <string name="feature_budgets_free">Up to 2</string>
+    <string name="feature_budgets_premium">Unlimited</string>
+    <string name="feature_goals">Savings goals</string>
+    <string name="feature_goals_free">1 goal</string>
+    <string name="feature_goals_premium">Unlimited</string>
+    <string name="feature_bills">Recurring bills and reminders</string>
+    <string name="feature_bills_free">Not included</string>
+    <string name="feature_bills_premium">Included</string>
+    <string name="feature_reports">Reports</string>
+    <string name="feature_reports_free">Current month</string>
+    <string name="feature_reports_premium">Any month + 6-month trend</string>
+
+    <!-- Free plan limit messages -->
+    <string name="limit_wallets">The free plan allows 2 wallets. Upgrade for unlimited wallets.</string>
+    <string name="limit_budgets">The free plan allows 2 budgets. Upgrade for unlimited budgets.</string>
+    <string name="limit_goals">The free plan allows 1 savings goal. Upgrade for unlimited goals.</string>
+    <string name="limit_bills">Recurring bills are a Premium feature.</string>
+
+    <!-- Default categories (added on first launch) -->
+    <string-array name="default_expense_categories">
+        <item>Food &amp; Drink</item>
+        <item>Groceries</item>
+        <item>Transport</item>
+        <item>Shopping</item>
+        <item>Bills &amp; Utilities</item>
+        <item>Rent &amp; Housing</item>
+        <item>Health</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+        <item>Travel</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="default_income_categories">
+        <item>Salary</item>
+        <item>Business</item>
+        <item>Gift</item>
+        <item>Interest</item>
+        <item>Other income</item>
+    </string-array>
+</resources>

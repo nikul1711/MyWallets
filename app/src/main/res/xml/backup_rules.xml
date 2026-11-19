@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 6-11 Auto Backup: back up everything (including the database) to the user's Google account. -->
+<full-backup-content />

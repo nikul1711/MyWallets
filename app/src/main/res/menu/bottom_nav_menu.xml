@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Each item id must match the id of its screen in nav_graph.xml. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transactionsFragment"
+        android:icon="@drawable/ic_list"
+        android:title="@string/nav_transactions" />
+    <item
+        android:id="@+id/budgetsFragment"
+        android:icon="@drawable/ic_budget"
+        android:title="@string/nav_budgets" />
+    <item
+        android:id="@+id/reportsFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/nav_reports" />
+    <item
+        android:id="@+id/walletsFragment"
+        android:icon="@drawable/ic_wallet"
+        android:title="@string/nav_wallets" />
+    <item
+        android:id="@+id/moreFragment"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/nav_more" />
+</menu>

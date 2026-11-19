@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The map of all screens. The first five are the bottom-navigation tabs.
+    "label" is the title shown in the toolbar. "argument" is the id passed to a form
+    (0 means "create a new one", anything else means "edit that one").
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/transactionsFragment">
+
+    <!-- Bottom navigation tabs -->
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.wallet.mywallet.ui.transactions.TransactionsFragment"
+        android:label="@string/title_transactions" />
+    <fragment
+        android:id="@+id/budgetsFragment"
+        android:name="com.wallet.mywallet.ui.budgets.BudgetsFragment"
+        android:label="@string/title_budgets" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.wallet.mywallet.ui.reports.ReportsFragment"
+        android:label="@string/title_reports" />
+    <fragment
+        android:id="@+id/walletsFragment"
+        android:name="com.wallet.mywallet.ui.wallets.WalletsFragment"
+        android:label="@string/title_wallets" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.wallet.mywallet.ui.more.MoreFragment"
+        android:label="@string/title_more" />
+
+    <!-- Forms and secondary screens -->
+    <fragment
+        android:id="@+id/addEditTransactionFragment"
+        android:name="com.wallet.mywallet.ui.transactions.AddEditTransactionFragment"
+        android:label="@string/title_transaction">
+        <argument android:name="transactionId" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditWalletFragment"
+        android:name="com.wallet.mywallet.ui.wallets.AddEditWalletFragment"
+        android:label="@string/title_wallet">
+        <argument android:name="walletId" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditBudgetFragment"
+        android:name="com.wallet.mywallet.ui.budgets.AddEditBudgetFragment"
+        android:label="@string/title_budget">
+        <argument android:name="budgetId" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.wallet.mywallet.ui.goals.GoalsFragment"
+        android:label="@string/title_goals" />
+    <fragment
+        android:id="@+id/addEditGoalFragment"
+        android:name="com.wallet.mywallet.ui.goals.AddEditGoalFragment"
+        android:label="@string/title_goal">
+        <argument android:name="goalId" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/billsFragment"
+        android:name="com.wallet.mywallet.ui.bills.BillsFragment"
+        android:label="@string/title_bills" />
+    <fragment
+        android:id="@+id/addEditBillFragment"
+        android:name="com.wallet.mywallet.ui.bills.AddEditBillFragment"
+        android:label="@string/title_bill">
+        <argument android:name="billId" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wallet.mywallet.ui.profile.ProfileFragment"
+        android:label="@string/title_profile" />
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="com.wallet.mywallet.ui.premium.PremiumFragment"
+        android:label="@string/title_premium" />
+</navigation>
